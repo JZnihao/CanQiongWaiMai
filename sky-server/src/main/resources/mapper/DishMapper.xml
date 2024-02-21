@@ -38,7 +38,7 @@
                 and d.category_id = #{categoryId}
             </if>
             <if test="status != null">
-                d.status = #{status}
+                and d.status = #{status}
             </if>
         </where>
     </select>

@@ -5,6 +5,7 @@ import com.sky.dto.DishPageQueryDTO;
 import com.sky.entity.Dish;
 import com.sky.result.PageResult;
 import com.sky.vo.DishVO;
+import io.swagger.models.auth.In;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Service;
 
@@ -42,4 +43,11 @@ public interface DishService {
      * @return
      */
     List<DishVO> listWithFlavor(Dish dish);
+
+    /**
+     * 菜品售买或者停售
+     * @param status
+     * @param id
+     */
+    void startOrStop(Integer status, Long id);
 }
